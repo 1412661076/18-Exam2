@@ -2,8 +2,8 @@
 Exam 2, problem 2.
 
 Authors: Dave Fisher, David Mutchler, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.  October 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Rui Fang.  October 2018.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import math
 import time
@@ -109,8 +109,8 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    # run_test_problem2a()
-    # run_test_problem2b()
+    run_test_problem2a()
+    run_test_problem2b()
 
 
 def run_test_problem2a():
@@ -181,6 +181,7 @@ def run_test_problem2a():
 
 
 def problem2a(triangle):
+
     """
     What comes in:  a Triangle
     What goes out:  Returns a new Triangle whose side lengths are all
@@ -196,9 +197,14 @@ def problem2a(triangle):
       :rtype: Triangle
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+
+    aa = 2 * triangle.a
+    bb = 2 * triangle.b
+    cc = 2 * triangle.c
+    return Triangle(aa, bb, cc)
 
 
 def run_test_problem2b():
@@ -334,6 +340,7 @@ def run_test_problem2b():
 # of the Triangle class (at the top of this file) for a useful method.
 # -----------------------------------------------------------------------------
 def problem2b(triangles):
+
     """
     What comes in:  a sequence of Triangle objects (which could be empty)
       (where the   Triangle   class is defined above).
@@ -354,10 +361,15 @@ def problem2b(triangles):
       :rtype: int | float
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # IMPORTANT: See the HINT just before the DEF of this function.
     # -------------------------------------------------------------------------
+
+    sum = 0
+    for k in range(len(triangles)):
+        sum = sum + triangles[k].get_area()
+    return sum
 
 
 ###############################################################################
